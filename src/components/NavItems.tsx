@@ -20,6 +20,10 @@ const NavItems = () => {
     };
 
     document.addEventListener("keydown", handler);
+
+    return () => {
+      document.removeEventListener("keydown", handler);
+    };
   }, []);
 
   return (
